@@ -1,0 +1,113 @@
+{
+  "package": "inno_medical_eqm",
+  "trl_claim": 4,
+  "data": "synthetic only",
+  "all_pass": true,
+  "runs": [
+    {
+      "seed": 0,
+      "metrics": {
+        "auc": 0.9125,
+        "calibration_gap": 0.0056,
+        "brier_gain": 0.3808,
+        "base_rate": 0.1325
+      },
+      "criteria": [
+        {
+          "metric": "auc",
+          "op": ">=",
+          "threshold": 0.8,
+          "value": 0.9125,
+          "pass": true,
+          "description": "held-out ROC AUC for failure in next 30 days"
+        },
+        {
+          "metric": "calibration_gap",
+          "op": "<=",
+          "threshold": 0.04,
+          "value": 0.0056,
+          "pass": true,
+          "description": "|mean predicted - observed failure rate| on held-out devices"
+        },
+        {
+          "metric": "brier_gain",
+          "op": ">=",
+          "threshold": 0.05,
+          "value": 0.3808,
+          "pass": true,
+          "description": "Brier score improvement over constant-rate baseline"
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "metrics": {
+        "auc": 0.8784,
+        "calibration_gap": 0.0103,
+        "brier_gain": 0.3366,
+        "base_rate": 0.1225
+      },
+      "criteria": [
+        {
+          "metric": "auc",
+          "op": ">=",
+          "threshold": 0.8,
+          "value": 0.8784,
+          "pass": true,
+          "description": "held-out ROC AUC for failure in next 30 days"
+        },
+        {
+          "metric": "calibration_gap",
+          "op": "<=",
+          "threshold": 0.04,
+          "value": 0.0103,
+          "pass": true,
+          "description": "|mean predicted - observed failure rate| on held-out devices"
+        },
+        {
+          "metric": "brier_gain",
+          "op": ">=",
+          "threshold": 0.05,
+          "value": 0.3366,
+          "pass": true,
+          "description": "Brier score improvement over constant-rate baseline"
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "metrics": {
+        "auc": 0.8792,
+        "calibration_gap": 0.0191,
+        "brier_gain": 0.323,
+        "base_rate": 0.1158
+      },
+      "criteria": [
+        {
+          "metric": "auc",
+          "op": ">=",
+          "threshold": 0.8,
+          "value": 0.8792,
+          "pass": true,
+          "description": "held-out ROC AUC for failure in next 30 days"
+        },
+        {
+          "metric": "calibration_gap",
+          "op": "<=",
+          "threshold": 0.04,
+          "value": 0.0191,
+          "pass": true,
+          "description": "|mean predicted - observed failure rate| on held-out devices"
+        },
+        {
+          "metric": "brier_gain",
+          "op": ">=",
+          "threshold": 0.05,
+          "value": 0.323,
+          "pass": true,
+          "description": "Brier score improvement over constant-rate baseline"
+        }
+      ]
+    }
+  ]
+}
